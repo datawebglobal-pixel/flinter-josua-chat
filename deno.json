@@ -1,0 +1,13 @@
+{
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["dom", "dom.iterable", "deno.ns", "esnext"],
+    "types": ["node"]
+  },
+  "tasks": {
+    "build": "pnpm run build",
+    "start": "NODE_ENV=production node dist/index.js"
+  }
+}
+

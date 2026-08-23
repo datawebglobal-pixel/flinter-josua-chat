@@ -67,10 +67,24 @@
 - [ ] Upload source project terbaru ke repository private `josuaabimanyu913-source/flinter-josua-chat`.
 - [ ] Verifikasi branch utama dan file project sudah tampil di GitHub.
 
-- [ ] Ulangi upload source ke repository GitHub setelah akun `datawebglobal-pixel` diberi akses collaborator.
+- [x] Ulangi upload source ke repository GitHub setelah akun `datawebglobal-pixel` diberi akses collaborator.
 
-- [ ] Verifikasi undangan collaborator sudah diterima dan akses push ke repository target tersedia.
+- [x] Verifikasi undangan collaborator sudah diterima dan akses push ke repository target tersedia.
 
-- [ ] Periksa atau buat repository private `datawebglobal-pixel/flinter-josua-chat`.
-- [ ] Upload source project terbaru ke repository datawebglobal-pixel.
-- [ ] Verifikasi struktur repository dan branch utama setelah upload.
+- [x] Periksa atau buat repository private `datawebglobal-pixel/flinter-josua-chat`.
+- [x] Upload source project terbaru ke repository datawebglobal-pixel.
+- [x] Verifikasi struktur repository dan branch utama setelah upload.
+
+- [x] Source dialihkan ke repository private `datawebglobal-pixel/flinter-josua-chat` sebagai workaround setelah target PrinterPeci01 mengembalikan 404.
+- [x] Verifikasi commit `6204387` dan struktur source pada repository datawebglobal-pixel.
+- [ ] Minta pengguna menambahkan akun GitHub pribadi sebagai collaborator pada repository datawebglobal-pixel jika ingin mengelolanya sendiri.
+
+- [ ] Cari alternatif hosting gratis tanpa kartu setelah Render meminta verifikasi pembayaran.
+- [ ] Tentukan opsi paling kompatibel dengan backend Node.js, MySQL, chat, dan storage project.
+- [ ] Perbarui panduan deployment sesuai platform alternatif yang dipilih.
+
+- [x] Tambahkan konfigurasi deployment Deno Deploy untuk project.
+- [ ] Verifikasi kompatibilitas server Express/tRPC, Drizzle MySQL, dan storage pada Deno.
+- [x] Perbarui README dengan langkah deployment Deno Deploy.
+- [x] Jalankan check, test, dan build setelah perubahan Deno.
+- [ ] Sinkronkan perubahan Deno ke repository GitHub datawebglobal-pixel.
