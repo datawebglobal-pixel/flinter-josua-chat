@@ -79,12 +79,23 @@
 - [x] Verifikasi commit `6204387` dan struktur source pada repository datawebglobal-pixel.
 - [ ] Minta pengguna menambahkan akun GitHub pribadi sebagai collaborator pada repository datawebglobal-pixel jika ingin mengelolanya sendiri.
 
-- [ ] Cari alternatif hosting gratis tanpa kartu setelah Render meminta verifikasi pembayaran.
-- [ ] Tentukan opsi paling kompatibel dengan backend Node.js, MySQL, chat, dan storage project.
-- [ ] Perbarui panduan deployment sesuai platform alternatif yang dipilih.
+- [x] Cari alternatif hosting gratis tanpa kartu setelah Render meminta verifikasi pembayaran.
+- [x] Tentukan opsi paling kompatibel dengan backend Node.js, MySQL, chat, dan storage project.
+- [x] Perbarui panduan deployment sesuai platform alternatif yang dipilih.
 
 - [x] Tambahkan konfigurasi deployment Deno Deploy untuk project.
 - [ ] Verifikasi kompatibilitas server Express/tRPC, Drizzle MySQL, dan storage pada Deno.
 - [x] Perbarui README dengan langkah deployment Deno Deploy.
 - [x] Jalankan check, test, dan build setelah perubahan Deno.
-- [ ] Sinkronkan perubahan Deno ke repository GitHub datawebglobal-pixel.
+- [x] Sinkronkan perubahan Deno ke repository GitHub datawebglobal-pixel.
+
+- [ ] Verifikasi deployment nyata di Deno Deploy untuk server Express/tRPC dengan mysql2/Aiven.
+- [ ] Jika Deno gagal, pilih ulang platform gratis tanpa kartu yang terbukti kompatibel atau tambahkan adapter runtime yang berfungsi.
+
+- [x] Tambahkan konfigurasi Vercel untuk frontend dan backend endpoint.
+- [ ] Verifikasi kompatibilitas Express/tRPC serta koneksi MySQL Aiven pada runtime Vercel.
+- [x] Perbarui panduan deployment Vercel dan environment variable.
+- [x] Jalankan check, test, dan build setelah konfigurasi Vercel.
+- [ ] Sinkronkan perubahan Vercel ke repository GitHub utama.
+- [x] Perbaiki README-VERCEL agar output directory sesuai konfigurasi aktual (`dist/public`).
+- [x] Tambahkan daftar lengkap environment variable S3-compatible untuk deployment Vercel.
