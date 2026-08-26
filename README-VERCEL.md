@@ -1,6 +1,6 @@
 # Deployment Vercel — Flinter & Josua
 
-Project ini menggunakan Vite untuk frontend dan Express/tRPC untuk endpoint serverless. File `api/[...path].ts` meneruskan request `/api/*` ke factory Express tanpa membuka port sendiri.
+Project ini menggunakan Vite untuk frontend dan Express/tRPC untuk endpoint serverless. File `index.ts` adalah entrypoint Express top-level yang dikenali Vercel, sedangkan `api/[...path].ts` disediakan sebagai fallback catch-all. Keduanya meneruskan request ke factory Express tanpa membuka port sendiri.
 
 ## Pengaturan Vercel
 
@@ -40,3 +40,15 @@ Gunakan connection string MySQL dari Aiven. Pastikan password baru telah dibuat 
 Vercel menjalankan endpoint sebagai fungsi serverless. Jangan mengandalkan proses yang berjalan terus-menerus, WebSocket permanen, atau file lokal persisten. Chat project menggunakan polling berkala sehingga sesuai untuk deployment serverless, tetapi pembaruan tidak memakai koneksi WebSocket.
 
 Upload media besar perlu dilakukan ke object storage S3-compatible. Hindari mengirim video besar melalui fungsi Vercel karena batas ukuran request dan waktu eksekusi dapat berbeda menurut paket akun. Setelah deploy, uji login identitas, riwayat chat, pengiriman pesan, badge unread, serta halaman Galeri/Kenangan.
+
+## Alur dari repository GitHub sampai Vercel
+
+Jika repository belum ada, buka GitHub, pilih **New repository**, gunakan nama `flinter-josua-chat`, aktifkan **Private**, lalu unggah source project atau gunakan repository yang sudah disiapkan oleh project ini. Repository yang saat ini menjadi sumber deployment adalah [`datawebglobal-pixel/flinter-josua-chat`](https://github.com/datawebglobal-pixel/flinter-josua-chat).
+
+Di Vercel, pilih **Add New → Project**, pilih **Import Git Repository**, hubungkan akun GitHub bila diminta, lalu pilih repository tersebut. Biarkan Root Directory kosong dan pastikan Build Command serta Output Directory mengikuti `vercel.json`. Isi environment variable sebelum deployment, kemudian pilih **Deploy**. Setelah build selesai, Vercel memberikan URL `vercel.app`; URL itu dapat diuji untuk pemilihan identitas, chat, badge unread, serta Galeri/Kenangan.
+
+Jika halaman utama tampil tetapi pesan atau upload menghasilkan 404, buka **Deployments** dan jalankan redeploy dari commit terbaru branch `main`. Pastikan project Vercel terhubung ke `datawebglobal-pixel/flinter-josua-chat`, bukan repository atau branch lama. Uji `https://domain-anda.vercel.app/api/health`; respons yang benar adalah JSON dengan `ok: true` dan `runtime: "vercel"`. Setelah health-check aktif, uji `Chat Kita`. Jika health-check aktif tetapi chat gagal, periksa `DATABASE_URL`; jika upload gagal, periksa semua variabel `S3_*` dan `PUBLIC_STORAGE_URL`.
+
+## Menambahkan collaborator GitHub
+
+Pemilik repository dapat membuka **Settings → Collaborators** pada repository `datawebglobal-pixel/flinter-josua-chat`, memilih **Add people**, lalu mencari username atau email GitHub pribadi yang akan mengelola source. Setelah undangan diterima, collaborator dapat membuka repository dari akunnya dan melakukan perubahan sesuai izin yang diberikan. Jangan mengirim token GitHub, password database, access key S3, atau secret lain ke repository maupun chat.
