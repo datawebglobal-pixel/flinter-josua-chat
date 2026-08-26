@@ -4,10 +4,10 @@
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist/public",
   "functions": {
-    "index.ts": {
+    "api/[...path].ts": {
       "maxDuration": 10
     },
-    "api/[...path].ts": {
+    "api/health.ts": {
       "maxDuration": 10
     }
   }
