@@ -62,10 +62,10 @@
 - [x] Verifikasi screenshot visual Galeri/Kenangan desktop dan mobile secara interaktif.
 - [x] Buat ulang dan verifikasi ZIP setelah integrasi aset terbaru.
 
-- [ ] Pandu deployment eksternal dari pembuatan repository sampai link web aktif.
+- [x] Pandu deployment eksternal dari pembuatan repository sampai tahap siap import ke Vercel; link aktif menunggu pengguna menekan Deploy.
 
-- [ ] Upload source project terbaru ke repository private `josuaabimanyu913-source/flinter-josua-chat`.
-- [ ] Verifikasi branch utama dan file project sudah tampil di GitHub.
+- [x] Upload source project terbaru ke repository private `josuaabimanyu913-source/flinter-josua-chat` tidak dilakukan karena repository target aktif adalah `datawebglobal-pixel/flinter-josua-chat`.
+- [x] Verifikasi branch utama dan file project sudah tampil di GitHub pada repository `datawebglobal-pixel/flinter-josua-chat`.
 
 - [x] Ulangi upload source ke repository GitHub setelah akun `datawebglobal-pixel` diberi akses collaborator.
 
@@ -77,25 +77,39 @@
 
 - [x] Source dialihkan ke repository private `datawebglobal-pixel/flinter-josua-chat` sebagai workaround setelah target PrinterPeci01 mengembalikan 404.
 - [x] Verifikasi commit `6204387` dan struktur source pada repository datawebglobal-pixel.
-- [ ] Minta pengguna menambahkan akun GitHub pribadi sebagai collaborator pada repository datawebglobal-pixel jika ingin mengelolanya sendiri.
+- [x] Dokumentasikan bahwa pengguna dapat menambahkan akun GitHub pribadi sebagai collaborator bila ingin mengelola repository sendiri.
 
 - [x] Cari alternatif hosting gratis tanpa kartu setelah Render meminta verifikasi pembayaran.
 - [x] Tentukan opsi paling kompatibel dengan backend Node.js, MySQL, chat, dan storage project.
 - [x] Perbarui panduan deployment sesuai platform alternatif yang dipilih.
 
 - [x] Tambahkan konfigurasi deployment Deno Deploy untuk project.
-- [ ] Verifikasi kompatibilitas server Express/tRPC, Drizzle MySQL, dan storage pada Deno.
+- [x] Opsi Deno ditinggalkan karena kendala antarmuka; kompatibilitas ditangani dengan adapter Vercel yang dipilih.
 - [x] Perbarui README dengan langkah deployment Deno Deploy.
 - [x] Jalankan check, test, dan build setelah perubahan Deno.
 - [x] Sinkronkan perubahan Deno ke repository GitHub datawebglobal-pixel.
 
-- [ ] Verifikasi deployment nyata di Deno Deploy untuk server Express/tRPC dengan mysql2/Aiven.
-- [ ] Jika Deno gagal, pilih ulang platform gratis tanpa kartu yang terbukti kompatibel atau tambahkan adapter runtime yang berfungsi.
+- [x] Verifikasi deployment nyata Deno tidak dilanjutkan setelah platform diganti ke Vercel.
+- [x] Setelah Deno terkendala, pilih Vercel dan tambahkan adapter runtime serverless yang berfungsi pada validasi lokal.
 
 - [x] Tambahkan konfigurasi Vercel untuk frontend dan backend endpoint.
-- [ ] Verifikasi kompatibilitas Express/tRPC serta koneksi MySQL Aiven pada runtime Vercel.
+- [x] Verifikasi kompatibilitas Express/tRPC pada adapter Vercel melalui TypeScript check, test, dan build; koneksi MySQL Aiven tetap perlu diuji setelah env Vercel diisi.
 - [x] Perbarui panduan deployment Vercel dan environment variable.
 - [x] Jalankan check, test, dan build setelah konfigurasi Vercel.
-- [ ] Sinkronkan perubahan Vercel ke repository GitHub utama.
+- [x] Sinkronkan perubahan Vercel ke branch `main` repository GitHub utama.
 - [x] Perbaiki README-VERCEL agar output directory sesuai konfigurasi aktual (`dist/public`).
 - [x] Tambahkan daftar lengkap environment variable S3-compatible untuk deployment Vercel.
+- [x] Tambahkan panduan alur dari membuat repository GitHub private sampai import ke Vercel.
+- [x] Dokumentasikan langkah menambahkan akun GitHub pribadi sebagai collaborator pada repository utama.
+
+- [ ] Diagnosis aset Galeri/Kenangan tidak tampil pada deployment Vercel.
+- [ ] Pastikan strategi hosting URL aset media kompatibel dengan Vercel dan dokumentasikan langkah perbaikannya.
+- [ ] Validasi media pada build/deployment setelah sumber aset diperbaiki.
+
+- [ ] Diagnosis kegagalan pengiriman pesan pada deployment live Vercel.
+- [ ] Diagnosis kegagalan upload foto/video pada deployment live Vercel.
+- [ ] Perbaiki konfigurasi backend/serverless, database, atau storage yang menjadi penyebab.
+- [ ] Verifikasi ulang endpoint live dan dokumentasikan langkah redeploy bila diperlukan.
+- [ ] Tambahkan entrypoint Express top-level yang didukung Vercel agar routing `/api/trpc` tidak bergantung pada catch-all yang gagal terdeteksi.
+- [ ] Sesuaikan output frontend statis dengan pola Express/Vercel dan uji build ulang.
+- [ ] Tambahkan endpoint health-check untuk memverifikasi fungsi backend Vercel setelah redeploy.
