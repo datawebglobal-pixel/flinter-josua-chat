@@ -114,3 +114,4 @@
 - [ ] Sesuaikan output frontend statis dengan pola Express/Vercel dan uji build ulang.
 - [ ] Tambahkan endpoint health-check untuk memverifikasi fungsi backend Vercel setelah redeploy.
 - [ ] Hilangkan alias import frontend dari jalur backend serverless agar bundler Vercel tidak gagal memuat fungsi.
+- [ ] Tambahkan route health minimal untuk mengisolasi kegagalan runtime Express dari routing Vercel.
