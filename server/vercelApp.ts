@@ -17,6 +17,10 @@ export function createVercelApp() {
   registerStorageProxy(app);
   registerOAuthRoutes(app);
 
+  app.get("/api/health", (_req, res) => {
+    res.status(200).json({ ok: true, service: "flinter-josua-chat", runtime: "vercel" });
+  });
+
   app.use(
     "/api/trpc",
     createExpressMiddleware({
