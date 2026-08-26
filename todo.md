@@ -113,3 +113,4 @@
 - [ ] Tambahkan entrypoint Express top-level yang didukung Vercel agar routing `/api/trpc` tidak bergantung pada catch-all yang gagal terdeteksi.
 - [ ] Sesuaikan output frontend statis dengan pola Express/Vercel dan uji build ulang.
 - [ ] Tambahkan endpoint health-check untuk memverifikasi fungsi backend Vercel setelah redeploy.
+- [ ] Hilangkan alias import frontend dari jalur backend serverless agar bundler Vercel tidak gagal memuat fungsi.
