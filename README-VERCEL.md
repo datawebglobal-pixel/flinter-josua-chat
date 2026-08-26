@@ -1,6 +1,6 @@
 # Deployment Vercel — Flinter & Josua
 
-Project ini menggunakan Vite untuk frontend dan Express/tRPC untuk endpoint serverless. File `index.ts` adalah entrypoint Express top-level yang dikenali Vercel, sedangkan `api/[...path].ts` disediakan sebagai fallback catch-all. Keduanya meneruskan request ke factory Express tanpa membuka port sendiri.
+Project ini menggunakan Vite untuk frontend dan Express/tRPC untuk endpoint serverless. File `api/[...path].ts` meneruskan request `/api/*` ke factory Express tanpa membuka port sendiri, sedangkan `api/health.ts` menyediakan health-check minimal untuk verifikasi deployment.
 
 ## Pengaturan Vercel
 
